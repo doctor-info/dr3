@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>د. أحمد محمد | استشاري</title>
+    
+    <!-- Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap">
+    
+    <!-- Modern CSS Framework - Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f1fe',
+                            100: '#e2e4fc',
+                            200: '#c9cdf9',
+                            300: '#a8adf4',
+                            400: '#8a8fee',
+                            500: '#6a6ee6',
+                            600: '#4e54c8',
+                            700: '#4145a8',
+                            800: '#383c89',
+                            900: '#343770',
+                            950: '#1e2044',
+                        },
+                        accent: {
+                            50: '#f4f0fe',
+                            100: '#ebe0fd',
+                            200: '#dac5fb',
+                            300: '#c39df8',
+                            400: '#ab6cf3',
+                            500: '#9a47ed',
+                            600: '#8a2de4',
+                            700: '#7622c9',
+                            800: '#6a11cb',
+                            900: '#5a11a5',
+                            950: '#370a68',
+                        }
+                    },
+                    fontFamily: {
+                        'tajawal': ['Tajawal', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'spin-slow': 'spin 8s linear infinite',
+                        'wiggle': 'wiggle 1s ease-in-out infinite',
+                        'fade-in-down': 'fade-in-down 1.5s ease-out',
+                        'fade-in-up': 'fade-in-up 1.5s ease-out',
+                        'fade-in-left': 'fade-in-left 1.5s ease-out',
+                        'fade-in-right': 'fade-in-right 1.5s ease-out',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        },
+                        'fade-in-down': {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(-20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            },
+                        },
+                        'fade-in-up': {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            },
+                        },
+                        'fade-in-left': {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateX(-20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateX(0)'
+                            },
+                        },
+                        'fade-in-right': {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateX(20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateX(0)'
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/EasePack.min.js"></script>
+    
+    <!-- Alpine.js for Lightweight Interactions -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"></script>
+    
+    <!-- Swiper.js for Modern Carousels -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Lottie for Vector Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    
+    <style>
+        /* Base Styles */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Glassmorphism Effects */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+        
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Neumorphism Effects */
+        .neumorph {
+            border-radius: 24px;
+            background: #f0f0f0;
+            box-shadow: 
+                16px 16px 32px #d1d1d1,
+                -16px -16px 32px #ffffff;
+        }
+        
+        .neumorph-inset {
+            border-radius: 24px;
+            background: #f0f0f0;
+            box-shadow: 
+                inset 8px 8px 16px #d1d1d1,
+                inset -8px -8px 16px #ffffff;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #4e54c8, #8f94fb);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #6a11cb, #8f94fb);
+        }
+        
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Custom Animations */
+        .animate-delay-100 {
+            animation-delay: 100ms;
+        }
+        
+        .animate-delay-200 {
+            animation-delay: 200ms;
+        }
+        
+        .animate-delay-300 {
+            animation-delay: 300ms;
+        }
+        
+        .animate-delay-400 {
+            animation-delay: 400ms;
+        }
+        
+        .animate-delay-500 {
+            animation-delay: 500ms;
+        }
+        
+        /* Advanced Animation Effects */
+        .hover-glow {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-glow:hover {
+            box-shadow: 0 0 25px rgba(78, 84, 200, 0.6);
+            transform: translateY(-5px);
+        }
+        
+        .text-shimmer {
+            background: linear-gradient(90deg, 
+                rgba(78, 84, 200, 0.8) 0%, 
+                rgba(143, 148, 251, 1) 20%, 
+                rgba(78, 84, 200, 0.8) 40%);
+            background-size: 200% auto;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s linear infinite;
+        }
+        
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
+        
+        .floating-3d {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: transform 0.3s ease;
+        }
+        
+        .floating-3d:hover {
+            transform: rotateX(10deg) rotateY(-10deg) translateZ(10px);
+        }
+        
+        .ripple-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ripple-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%, -50%);
+            transform-origin: 50% 50%;
+        }
+        
+        .ripple-btn:hover::after {
+            animation: ripple 1s ease-out;
+        }
+        
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(20, 20);
+                opacity: 0;
+            }
+        }
+        
+        .neon-text {
+            text-shadow: 
+                0 0 5px rgba(78, 84, 200, 0.5),
+                0 0 10px rgba(78, 84, 200, 0.5),
+                0 0 15px rgba(78, 84, 200, 0.5),
+                0 0 20px rgba(78, 84, 200, 0.5);
+        }
+        
+        .neon-border {
+            box-shadow: 
+                0 0 5px rgba(78, 84, 200, 0.5),
+                0 0 10px rgba(78, 84, 200, 0.5),
+                inset 0 0 5px rgba(78, 84, 200, 0.5),
+                inset 0 0 10px rgba(78, 84, 200, 0.5);
+        }
+        
+        .morph-bg {
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+        
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(90deg, #4e54c8, #8f94fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .gradient-text-accent {
+            background: linear-gradient(90deg, #6a11cb, #8f94fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Gradient Borders */
+        .gradient-border {
+            position: relative;
+            border-radius: 0.75rem;
+        }
+        
+        .gradient-border::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 0.75rem;
+            padding: 2px;
+            background: linear-gradient(45deg, #4e54c8, #8f94fb, #6a11cb);
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        
+        /* Blob Animation */
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            filter: blur(100px);
+            opacity: 0.3;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #4e54c8, #8f94fb);
+            animation: blob-animation 20s infinite alternate;
+            z-index: -1;
+        }
+        
+        .blob-accent {
+            background: linear-gradient(45deg, #6a11cb, #8f94fb);
+            animation: blob-animation 25s infinite alternate-reverse;
+        }
+        
+        @keyframes blob-animation {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(100px, -100px) scale(1.2);
+            }
+            66% {
+                transform: translate(-100px, 100px) scale(0.8);
+            }
+            100% {
+                transform: translate(100px, 100px) scale(1);
+            }
+        }
+        
+        /* Timeline Styles */
+        .timeline-container {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+            top: 0;
+            bottom: 0;
+            right: 50%;
+            margin-right: -2px;
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-left: 2rem;
+            position: relative;
+            margin: 2rem 0;
+            width: 50%;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            margin-right: 50%;
+        }
+        
+        .timeline-item:nth-child(even) {
+            margin-right: 0;
+            margin-left: auto;
+            justify-content: flex-start;
+            padding-left: 0;
+            padding-right: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+            box-shadow: 0 0 0 4px rgba(78, 84, 200, 0.2);
+        }
+        
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-line {
+                right: 20px;
+                margin-right: 0;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 3rem;
+                padding-right: 0;
+                margin-right: 0;
+                margin-left: 0;
+            }
+            
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                margin-right: 0;
+                margin-left: 0;
+                padding-left: 3rem;
+                padding-right: 0;
+            }
+            
+            .timeline-item::before,
+            .timeline-item:nth-child(odd)::before,
+            .timeline-item:nth-child(even)::before {
+                right: 11px;
+                left: auto;
+            }
+        }
+        
+        /* Service Card Hover Effects */
+        .service-card {
+            transition: all 0.5s ease;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: linear-gradient(135deg, rgba(78, 84, 200, 0.1), rgba(143, 148, 251, 0.1));
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+        
+        .service-card:hover::before {
+            height: 100%;
+        }
+        
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            transition: width 0.5s ease;
+            border-radius: 3px;
+        }
+        
+        .service-card:hover::after {
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            transition: all 0.5s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: rotateY(360deg);
+        }
+        
+        /* Parallax Effect */
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        /* 3D Card Effect */
+        .card-3d {
+            transition: transform 0.5s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .card-3d:hover {
+            transform: rotateY(10deg) rotateX(10deg);
+        }
+        
+        /* Magnetic Button Effect */
+        .magnetic-btn {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="w-24 h-24 relative">
+            <div id="lottie-loader"></div>
+        </div>
+    </div>
+    
+    <!-- Background Blobs -->
+    <div class="blob top-0 right-0"></div>
+    <div class="blob blob-accent bottom-0 left-0"></div>
+    
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-3">
+            <div class="glass rounded-2xl px-6 py-3 flex items-center justify-between">
+                <a href="#hero" class="text-2xl font-bold text-shimmer">د. أحمد محمد</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-1 space-x-reverse">
+                    <a href="#hero" class="px-4 py-2 rounded-xl text-gray-900 font-medium hover:text-primary-600 hover:bg-white/80 transition-all duration-300 nav-link">الرئيسية</a>
+                    <a href="#about" class="px-4 py-2 rounded-xl text-gray-900 font-medium hover:text-primary-600 hover:bg-white/80 transition-all duration-300 nav-link">نبذة عني</a>
+                    <a href="#qualifications" class="px-4 py-2 rounded-xl text-gray-900 font-medium hover:text-primary-600 hover:bg-white/80 transition-all duration-300 nav-link">المؤهلات</a>
+                    <a href="#services" class="px-4 py-2 rounded-xl text-gray-900 font-medium hover:text-primary-600 hover:bg-white/80 transition-all duration-300 nav-link">الخدمات</a>
+                    <a href="#online-consultation" class="px-4 py-2 rounded-xl text-gray-900 font-medium hover:text-primary-600 hover:bg-white/80 transition-all duration-300 nav-link">الكشف أونلاين</a>
+                    <a href="#contact" class="px-4 py-2 rounded-xl text-gray-900 font-medium hover:text-primary-600 hover:bg-white/80 transition-all duration-300 nav-link">تواصل معنا</a>
+                    <a href="#contact" class="magnetic-btn ripple-btn mr-4 px-6 py-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-xl hover:shadow-lg hover:shadow-primary-500/30 transition-all duration-300 font-medium neon-border">احجز الآن</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden flex items-center" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden glass rounded-2xl mt-2 px-6 py-4 hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#hero" class="px-4 py-2 rounded-xl text-gray-700 hover:text-primary-600 transition-all duration-300 nav-link">الرئيسية</a>
+                    <a href="#about" class="px-4 py-2 rounded-xl text-gray-700 hover:text-primary-600 transition-all duration-300 nav-link">نبذة عني</a>
+                    <a href="#qualifications" class="px-4 py-2 rounded-xl text-gray-700 hover:text-primary-600 transition-all duration-300 nav-link">المؤهلات</a>
+                    <a href="#services" class="px-4 py-2 rounded-xl text-gray-700 hover:text-primary-600 transition-all duration-300 nav-link">الخدمات</a>
+                    <a href="#online-consultation" class="px-4 py-2 rounded-xl text-gray-700 hover:text-primary-600 transition-all duration-300 nav-link">الكشف أونلاين</a>
+                    <a href="#contact" class="px-4 py-2 rounded-xl text-gray-700 hover:text-primary-600 transition-all duration-300 nav-link">تواصل معنا</a>
+                    <a href="#contact" class="px-6 py-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-xl hover:shadow-lg hover:shadow-primary-500/30 transition-all duration-300 text-center">احجز الآن</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen relative overflow-hidden bg-gradient-to-br from-primary-600 to-primary-500 flex items-center">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
+        
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in-down neon-text" id="hero-title">د. أحمد محمد</h1>
+                    <h2 class="text-2xl md:text-3xl font-medium mb-8 text-white/90 animate-fade-in-down animate-delay-100" id="hero-subtitle">استشاري أمراض القلب والأوعية الدموية | زميل الكلية الملكية البريطانية</h2>
+                    
+                    <div class="flex flex-wrap gap-4 mb-8 animate-fade-in-up animate-delay-200">
+                        <a href="#contact" class="px-8 py-3 bg-white text-primary-600 rounded-xl hover:shadow-lg hover:shadow-white/30 transition-all duration-300 flex items-center hover-glow ripple-btn">
+                            <i class="fas fa-calendar-check ml-2"></i>
+                            احجز موعد
+                        </a>
+                        <a href="#services" class="px-8 py-3 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center ripple-btn">
+                            <i class="fas fa-heartbeat ml-2"></i>
+                            خدماتنا
+                        </a>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4 animate-fade-in-up animate-delay-300">
+                        <a href="tel:+201234567890" class="px-5 py-2 bg-white/20 backdrop-blur-sm text-white rounded-xl hover:bg-white/30 transition-all duration-300 flex items-center">
+                            <i class="fas fa-phone-alt ml-2"></i>
+                            اتصل الآن
+                        </a>
+                        <a href="https://wa.me/201234567890" class="px-5 py-2 bg-[#25D366]/20 backdrop-blur-sm text-white rounded-xl hover:bg-[#25D366]/30 transition-all duration-300 flex items-center">
+                            <i class="fab fa-whatsapp ml-2"></i>
+                            واتساب
+                        </a>
+                    </div>
+                    
+                    <div class="mt-12 glass-dark p-6 rounded-2xl max-w-md animate-fade-in-up animate-delay-400">
+                        <div class="flex items-start">
+                            <i class="fas fa-quote-right text-3xl text-white/50 ml-4 mt-1"></i>
+                            <div>
+                                <p class="text-white/90 mb-4">خبرة طبية متميزة تمتد لأكثر من 15 عامًا في مجال طب وجراحة القلب، مع التزام راسخ بتقديم رعاية صحية متكاملة وفق أحدث المعايير العالمية.</p>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center ml-3">
+                                        <i class="fas fa-user-md text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-white">د. أحمد محمد</p>
+                                        <p class="text-white/70 text-sm">استشاري أمراض القلب</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative animate-fade-in-left" id="hero-image-container">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-accent-500 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary-300 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
+                    
+                    <div class="relative floating-3d">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="د. أحمد محمد" class="rounded-3xl shadow-2xl shadow-primary-900/20 animate-float w-full object-cover max-h-[600px]" loading="lazy" id="hero-image">
+                        
+                        <div class="absolute -bottom-6 right-6 glass-dark rounded-2xl px-6 py-4 flex items-center hover-glow">
+                            <div class="w-12 h-12 rounded-xl bg-primary-500 flex items-center justify-center ml-4">
+                                <i class="fas fa-heartbeat text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-white font-bold">خبرة طبية</p>
+                                <p class="text-white/70">منذ عام 2008</p>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute -top-6 left-6 glass-dark rounded-2xl px-6 py-4 hover-glow">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+                                <p class="text-white">متاح للكشف الآن</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#f9fafb" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text inline-block mb-4">نبذة عني</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-primary-400 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="bg-white rounded-3xl shadow-xl shadow-gray-200/50 p-8 gradient-border">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center ml-4 shadow-lg shadow-primary-400/20">
+                                <i class="fas fa-user-md text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">د. أحمد محمد</h3>
+                                <p class="text-gray-600">استشاري أمراض القلب والأوعية الدموية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-2xl mb-6 border-r-4 border-primary-500">
+                            <p class="text-gray-700 leading-relaxed">
+                                خبرة طبية متميزة تمتد لأكثر من <span class="font-bold text-primary-600">15 عامًا</span> في مجال طب وجراحة القلب، مع التزام راسخ بتقديم رعاية صحية متكاملة وفق أحدث المعايير العالمية.
+                            </p>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            حاصل على الزمالة المصرية والبريطانية في أمراض القلب، وعضو فعال في الجمعية الأوروبية لأمراض القلب والجمعية المصرية للقلب. تخصصت في تشخيص وعلاج مجموعة واسعة من أمراض القلب والأوعية الدموية باستخدام أحدث التقنيات الطبية.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                                    <i class="fas fa-stethoscope text-primary-500 ml-2"></i>
+                                    تخصصات دقيقة
+                                </h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center ml-2">
+                                            <i class="fas fa-check text-primary-600 text-sm"></i>
+                                        </div>
+                                        <span class="text-gray-700">أمراض الشرايين التاجية</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center ml-2">
+                                            <i class="fas fa-check text-primary-600 text-sm"></i>
+                                        </div>
+                                        <span class="text-gray-700">اضطرابات نظم القلب</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center ml-2">
+                                            <i class="fas fa-check text-primary-600 text-sm"></i>
+                                        </div>
+                                        <span class="text-gray-700">أمراض صمامات القلب</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                                    <i class="fas fa-hospital-user text-primary-500 ml-2"></i>
+                                    خدمات متميزة
+                                </h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center ml-2">
+                                            <i class="fas fa-check text-primary-600 text-sm"></i>
+                                        </div>
+                                        <span class="text-gray-700">القسطرة التشخيصية</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center ml-2">
+                                            <i class="fas fa-check text-primary-600 text-sm"></i>
+                                        </div>
+                                        <span class="text-gray-700">تخطيط صدى القلب</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center ml-2">
+                                            <i class="fas fa-check text-primary-600 text-sm"></i>
+                                        </div>
+                                        <span class="text-gray-700">استشارات عن بُعد</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-4 py-2 bg-primary-100 text-primary-700 rounded-xl text-sm font-medium flex items-center">
+                                <i class="fas fa-award ml-1"></i>
+                                زمالة الكلية الملكية البريطانية
+                            </span>
+                            <span class="px-4 py-2 bg-primary-100 text-primary-700 rounded-xl text-sm font-medium flex items-center">
+                                <i class="fas fa-university ml-1"></i>
+                                دكتوراه في أمراض القلب
+                            </span>
+                            <span class="px-4 py-2 bg-primary-100 text-primary-700 rounded-xl text-sm font-medium flex items-center">
+                                <i class="fas fa-hospital ml-1"></i>
+                                استشاري في 3 مستشفيات
+                            </span>
+                        </div>
+                        
+                        <p class="text-gray-700 leading-relaxed">
+                            أؤمن بأهمية التواصل الفعال مع المرضى وتثقيفهم حول حالتهم الصحية، وأحرص على تخصيص الوقت الكافي لكل مريض للاستماع إلى شكواه والإجابة على جميع استفساراته.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2">
+                    <div class="relative" id="about-image-container">
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary-300 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
+                        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-accent-300 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
+                        
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80" alt="د. أحمد محمد" class="rounded-3xl shadow-xl shadow-gray-200/80 w-full object-cover max-h-[500px] hover-glow" loading="lazy">
+                        
+                        <div class="absolute -bottom-6 left-6 glass rounded-2xl px-6 py-4 backdrop-blur-xl hover-glow">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center ml-4 animate-spin-slow">
+                                    <i class="fas fa-heartbeat text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-800 font-bold">خبرة طبية</p>
+                                    <p class="text-gray-600">منذ عام 2008</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute top-4 right-4 glass rounded-full p-2 animate-bounce-slow">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center text-white">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-12">
+                        <div class="bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-6 card-3d">
+                            <div class="w-16 h-16 rounded-2xl bg-primary-100 flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-certificate text-primary-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 text-center mb-2">شهادات معتمدة</h4>
+                            <p class="text-gray-600 text-center text-sm">حاصل على شهادات وزمالات من أرقى المؤسسات الطبية العالمية</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-6 card-3d">
+                            <div class="w-16 h-16 rounded-2xl bg-primary-100 flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-hospital text-primary-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 text-center mb-2">مرافق حديثة</h4>
+                            <p class="text-gray-600 text-center text-sm">عيادة مجهزة بأحدث التقنيات والأجهزة الطبية لتشخيص أمراض القلب</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Qualifications Section -->
+    <section id="qualifications" class="py-20 bg-gray-50 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text inline-block mb-4">المؤهلات والخبرات</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-primary-400 mx-auto rounded-full"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">مسيرة علمية وعملية حافلة بالإنجازات في مجال طب القلب والأوعية الدموية</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-6 w-full max-w-lg hover:shadow-xl transition-all duration-300">
+                        <div class="inline-block px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-400 text-white rounded-xl mb-4">2008</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">بكالوريوس الطب والجراحة</h3>
+                        <h4 class="text-gray-600 italic mb-4">كلية الطب - جامعة القاهرة</h4>
+                        <p class="text-gray-700">تخرجت بتقدير امتياز مع مرتبة الشرف من كلية الطب جامعة القاهرة.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-6 w-full max-w-lg hover:shadow-xl transition-all duration-300">
+                        <div class="inline-block px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-400 text-white rounded-xl mb-4">2012</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">ماجستير أمراض القلب</h3>
+                        <h4 class="text-gray-600 italic mb-4">كلية الطب - جامعة عين شمس</h4>
+                        <p class="text-gray-700">حصلت على درجة الماجستير في أمراض القلب والأوعية الدموية بتقدير ممتاز.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-6 w-full max-w-lg hover:shadow-xl transition-all duration-300">
+                        <div class="inline-block px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-400 text-white rounded-xl mb-4">2015</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">دكتوراه في أمراض القلب</h3>
+                        <h4 class="text-gray-600 italic mb-4">كلية الطب - جامعة القاهرة</h4>
+                        <p class="text-gray-700">أكملت درجة الدكتوراه في تخصص أمراض القلب والقسطرة التداخلية.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-6 w-full max-w-lg hover:shadow-xl transition-all duration-300">
+                        <div class="inline-block px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-400 text-white rounded-xl mb-4">2016</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">زمالة المجلس البريطاني لأمراض القلب</h3>
+                        <h4 class="text-gray-600 italic mb-4">لندن - المملكة المتحدة</h4>
+                        <p class="text-gray-700">حصلت على زمالة المجلس البريطاني في تخصص أمراض القلب والأوعية الدموية.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-6 w-full max-w-lg hover:shadow-xl transition-all duration-300">
+                        <div class="inline-block px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-400 text-white rounded-xl mb-4">2018</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">استشاري أمراض القلب</h3>
+                        <h4 class="text-gray-600 italic mb-4">مستشفى القلب الدولي - القاهرة</h4>
+                        <p class="text-gray-700">تعيين كاستشاري أمراض القلب والأوعية الدموية في مستشفى القلب الدولي.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-6 w-full max-w-lg hover:shadow-xl transition-all duration-300">
+                        <div class="inline-block px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-400 text-white rounded-xl mb-4">2020</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">افتتاح العيادة الخاصة</h3>
+                        <h4 class="text-gray-600 italic mb-4">القاهرة - مصر</h4>
+                        <p class="text-gray-700">افتتاح عيادتي الخاصة المجهزة بأحدث التقنيات لتشخيص وعلاج أمراض القلب.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text inline-block mb-4">خدماتنا الطبية</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-primary-400 mx-auto rounded-full"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">نقدم مجموعة متكاملة من الخدمات الطبية المتخصصة في مجال أمراض القلب والأوعية الدموية</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-8 relative">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center mb-6 service-icon shadow-lg shadow-primary-400/20">
+                        <i class="fas fa-heartbeat text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">تشخيص أمراض القلب</h3>
+                    <p class="text-gray-700">تشخيص دقيق لجميع أمراض القلب مثل ارتفاع ضغط الدم، وأمراض الشرايين التاجية، واضطرابات نظم القلب باستخدام أحدث الأجهزة والتقنيات الطبية المتطورة.</p>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-8 relative">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center mb-6 service-icon shadow-lg shadow-primary-400/20">
+                        <i class="fas fa-stethoscope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">الفحص الدوري للقلب</h3>
+                    <p class="text-gray-700">فحوصات دورية شاملة للقلب والأوعية الدموية للاطمئنان على صحة القلب والوقاية من الأمراض.</p>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-8 relative">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center mb-6 service-icon shadow-lg shadow-primary-400/20">
+                        <i class="fas fa-procedures text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">رسم القلب الكهربائي</h3>
+                    <p class="text-gray-700">إجراء وتحليل رسم القلب الكهربائي لتشخيص اضطرابات نظم القلب وعضلة القلب.</p>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-8 relative">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center mb-6 service-icon shadow-lg shadow-primary-400/20">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">الموجات فوق الصوتية للقلب</h3>
+                    <p class="text-gray-700">فحص القلب بالموجات فوق الصوتية لتقييم وظائف القلب وصمامات القلب والشرايين التاجية.</p>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-8 relative">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center mb-6 service-icon shadow-lg shadow-primary-400/20">
+                        <i class="fas fa-running text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">اختبار الإجهاد</h3>
+                    <p class="text-gray-700">إجراء اختبار الإجهاد لتقييم أداء القلب أثناء المجهود البدني والكشف عن أمراض الشرايين التاجية.</p>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-8 relative">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center mb-6 service-icon shadow-lg shadow-primary-400/20">
+                        <i class="fas fa-laptop-medical text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">استشارات عن بُعد</h3>
+                    <p class="text-gray-700">تقديم استشارات طبية عن بُعد للحالات التي لا تتطلب فحصًا مباشرًا أو للمتابعة الدورية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Online Consultation Section -->
+    <section id="online-consultation" class="py-20 bg-gradient-to-br from-primary-600 to-primary-500 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-white mb-6">الكشف أونلاين</h2>
+                    <div class="w-24 h-1 bg-white mb-8 rounded-full"></div>
+                    
+                    <p class="text-white/90 text-lg mb-8">
+                        نقدم خدمة الكشف والاستشارات الطبية عن بُعد لتوفير الوقت والجهد على المرضى، خاصة لمن يعيشون في مناطق بعيدة أو لديهم صعوبة في الحركة. يمكنك الآن الحصول على استشارة طبية متخصصة من منزلك عبر مكالمة فيديو آمنة ومريحة.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center ml-4">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <p class="text-white">استشارة مباشرة مع الدكتور عبر الفيديو</p>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center ml-4">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <p class="text-white">مراجعة التقارير والفحوصات الطبية</p>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center ml-4">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <p class="text-white">وصف العلاج المناسب وإرساله إلكترونيًا</p>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center ml-4">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <p class="text-white">متابعة الحالة بشكل دوري</p>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center ml-4">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <p class="text-white">توفير الوقت والجهد</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-xl hover:shadow-lg hover:shadow-white/30 transition-all duration-300 font-bold">
+                        <i class="fas fa-video ml-2"></i>
+                        احجز كشف أونلاين الآن
+                    </a>
+                    
+                    <p class="text-white/70 mt-4 text-sm">* متاح على مدار الأسبوع من 10 صباحًا حتى 8 مساءً</p>
+                </div>
+                
+                <div class="relative" id="online-consultation-image">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-white rounded-full filter blur-3xl opacity-10 animate-pulse-slow"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white rounded-full filter blur-3xl opacity-10 animate-pulse-slow"></div>
+                    
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="الكشف أونلاين" class="rounded-3xl shadow-2xl shadow-primary-900/20 w-full object-cover max-h-[500px] hover-glow" loading="lazy">
+                    
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" id="video-play-button">
+                        <div class="w-24 h-24 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center animate-pulse-slow">
+                            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                <i class="fas fa-play text-primary-600 text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute -inset-4 rounded-full border-4 border-white/30 animate-ping opacity-75"></div>
+                    </div>
+                    
+                    <div class="absolute -bottom-6 right-6 glass-dark rounded-2xl px-6 py-4 backdrop-blur-xl hover-glow">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center ml-4">
+                                <i class="fas fa-video text-white text-xl animate-pulse-slow"></i>
+                            </div>
+                            <div>
+                                <p class="text-white font-bold">استشارة أونلاين</p>
+                                <p class="text-white/70">سهلة وآمنة</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute top-4 left-4 glass-dark rounded-2xl px-4 py-2 backdrop-blur-xl">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500 animate-pulse"></div>
+                            <p class="text-white text-sm">مباشر الآن</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text inline-block mb-4">تواصل معنا</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-primary-400 mx-auto rounded-full"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">نحن هنا للإجابة على استفساراتك وحجز موعدك بكل سهولة</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white rounded-3xl shadow-xl shadow-gray-200/50 p-8 gradient-border">
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center ml-4 flex-shrink-0 shadow-lg shadow-primary-400/20">
+                                    <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">العنوان</h3>
+                                    <p class="text-gray-700">123 شارع التحرير، ميدان الدقي، الجيزة، مصر</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center ml-4 flex-shrink-0 shadow-lg shadow-primary-400/20">
+                                    <i class="fas fa-phone-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">الهاتف</h3>
+                                    <p class="text-gray-700">+20 123 456 7890</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center ml-4 flex-shrink-0 shadow-lg shadow-primary-400/20">
+                                    <i class="fas fa-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">البريد الإلكتروني</h3>
+                                    <p class="text-gray-700">dr.ahmed@example.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center ml-4 flex-shrink-0 shadow-lg shadow-primary-400/20">
+                                    <i class="fas fa-clock text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">ساعات العمل</h3>
+                                    <p class="text-gray-700">السبت - الخميس: 1:00 م - 9:00 م<br>الجمعة: مغلق</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center mt-8 mb-8">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-primary-600 hover:bg-primary-600 hover:text-white transition-all duration-300 ml-2">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-primary-600 hover:bg-primary-600 hover:text-white transition-all duration-300 ml-2">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-primary-600 hover:bg-primary-600 hover:text-white transition-all duration-300 ml-2">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-primary-600 hover:bg-primary-600 hover:text-white transition-all duration-300 ml-2">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-primary-600 hover:bg-primary-600 hover:text-white transition-all duration-300">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <a href="https://wa.me/201234567890?text=أرغب%20في%20حجز%20موعد%20للكشف" target="_blank" rel="noopener" class="flex items-center justify-center w-full py-4 bg-[#25D366] text-white rounded-xl hover:shadow-lg hover:shadow-[#25D366]/30 transition-all duration-300 font-bold">
+                                <i class="fab fa-whatsapp text-xl ml-2"></i>
+                                تواصل عبر واتساب
+                            </a>
+                            
+                            <a href="https://m.me/drahmed" target="_blank" rel="noopener" class="flex items-center justify-center w-full py-4 bg-[#0084FF] text-white rounded-xl hover:shadow-lg hover:shadow-[#0084FF]/30 transition-all duration-300 font-bold">
+                                <i class="fab fa-facebook-messenger text-xl ml-2"></i>
+                                تواصل عبر ماسنجر
+                            </a>
+                            
+                            <a href="tel:+201234567890" class="flex items-center justify-center w-full py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-xl hover:shadow-lg hover:shadow-primary-500/30 transition-all duration-300 font-bold">
+                                <i class="fas fa-phone-alt text-xl ml-2"></i>
+                                اتصل بنا
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 h-[400px] gradient-border">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.6661062603226!2d31.20800857607841!3d30.041036674958533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145846d0471e7c71%3A0x6c2b2b6f8f18445!2z2YXZitiv2KfZhiDYp9mE2K_ZgtmK2Iwg2KfZhNis2YrYstip!5e0!3m2!1sar!2seg!4v1685123456789!5m2!1sar!2seg" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقع عيادة د. أحمد محمد" id="google-map"></iframe>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="https://goo.gl/maps/YourActualGoogleMapsLink" target="_blank" rel="noopener" class="flex items-center justify-center w-full py-4 bg-white border border-gray-200 text-gray-700 rounded-xl hover:bg-gray-50 transition-all duration-300 font-bold shadow-lg shadow-gray-200/20">
+                            <i class="fas fa-directions text-primary-600 ml-2"></i>
+                            احصل على الاتجاهات
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 bg-white rounded-3xl shadow-xl shadow-gray-200/50 p-8 gradient-border">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">احجز موعدك الآن</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="p-4 bg-gray-50 rounded-xl text-center hover:bg-primary-50 transition-all duration-300 cursor-pointer hover-glow day-card">
+                                <p class="font-bold text-gray-800">السبت</p>
+                                <p class="text-gray-600 text-sm">1:00 م - 9:00 م</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-xl text-center hover:bg-primary-50 transition-all duration-300 cursor-pointer hover-glow day-card">
+                                <p class="font-bold text-gray-800">الأحد</p>
+                                <p class="text-gray-600 text-sm">1:00 م - 9:00 م</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-xl text-center hover:bg-primary-50 transition-all duration-300 cursor-pointer hover-glow day-card">
+                                <p class="font-bold text-gray-800">الإثنين</p>
+                                <p class="text-gray-600 text-sm">1:00 م - 9:00 م</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-xl text-center hover:bg-primary-50 transition-all duration-300 cursor-pointer hover-glow day-card">
+                                <p class="font-bold text-gray-800">الثلاثاء</p>
+                                <p class="text-gray-600 text-sm">1:00 م - 9:00 م</p>
+                            </div>
+                        </div>
+                        
+                        <a href="tel:+201234567890" class="flex items-center justify-center w-full py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-xl hover:shadow-lg hover:shadow-primary-500/30 transition-all duration-300 font-bold mt-4">
+                            <i class="fas fa-calendar-check ml-2"></i>
+                            اتصل لحجز موعد
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2129&q=80')] bg-cover bg-center opacity-5"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <a href="#" class="text-3xl font-bold mb-6 block text-white">د. أحمد محمد</a>
+                    <p class="text-white/80 mb-6 leading-relaxed">
+                        استشاري أمراض القلب والأوعية الدموية، نقدم رعاية طبية متميزة باستخدام أحدث التقنيات والأساليب العلاجية المتطورة.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 relative inline-block">
+                        روابط سريعة
+                        <span class="absolute bottom-0 left-0 w-12 h-1 bg-white rounded-full"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#hero" class="text-white/80 hover:text-white transition-all duration-300 hover:pr-2">الرئيسية</a></li>
+                        <li><a href="#about" class="text-white/80 hover:text-white transition-all duration-300 hover:pr-2">نبذة عني</a></li>
+                        <li><a href="#qualifications" class="text-white/80 hover:text-white transition-all duration-300 hover:pr-2">المؤهلات</a></li>
+                        <li><a href="#services" class="text-white/80 hover:text-white transition-all duration-300 hover:pr-2">الخدمات</a></li>
+                        <li><a href="#contact" class="text-white/80 hover:text-white transition-all duration-300 hover:pr-2">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 relative inline-block">
+                        خدماتنا
+                        <span class="absolute bottom-0 left-0 w-12 h-1 bg-white rounded-full"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-white/80 hover:text-white transition-all duration-300 hover:pr-2">تشخيص أمراض القلب</a></li>
+                        <li><a href="#services" class="text-white/80 hover:text-white transition-all duration-300 hover:pr-2">الفحص الدوري للقلب</a></li>
+                        <li><a href="#services" class="text-white/80 hover:text-white transition-all duration-300 hover:pr-2">رسم القلب الكهربائي</a></li>
+                        <li><a href="#services" class="text-white/80 hover:text-white transition-all duration-300 hover:pr-2">الموجات فوق الصوتية</a></li>
+                        <li><a href="#online-consultation" class="text-white/80 hover:text-white transition-all duration-300 hover:pr-2">الكشف أونلاين</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 relative inline-block">
+                        تواصل معنا
+                        <span class="absolute bottom-0 left-0 w-12 h-1 bg-white rounded-full"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="tel:+201234567890" class="text-white/80 hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-phone-alt ml-2"></i>
+                                +20 123 456 7890
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:dr.ahmed@example.com" class="text-white/80 hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-envelope ml-2"></i>
+                                dr.ahmed@example.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white/80 hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-map-marker-alt ml-2"></i>
+                                123 شارع التحرير، الدقي، الجيزة
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 text-center">
+                <p class="text-white/70">© <span id="current-year"></span> د. أحمد محمد. جميع الحقوق محفوظة. تم التطوير بواسطة <a href="#" class="text-white hover:text-primary-200 transition-all duration-300">شركة تك سوليوشنز</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 text-white flex items-center justify-center shadow-lg shadow-primary-500/30 opacity-0 invisible transition-all duration-300 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Preloader with advanced animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lottie Animation for Preloader
+            const animation = lottie.loadAnimation({
+                container: document.getElementById('lottie-loader'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets5.lottiefiles.com/packages/lf20_t9gkkhz4.json'
+            });
+            
+            // Hide preloader after content loads with GSAP animation
+            setTimeout(function() {
+                const preloader = document.getElementById('preloader');
+                
+                gsap.to(preloader, {
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: "power2.inOut",
+                    onComplete: function() {
+                        preloader.style.display = 'none';
+                        
+                        // Start hero animations
+                        gsap.to("#hero-title", {
+                            opacity: 1,
+                            y: 0,
+                            duration: 1,
+                            ease: "power2.out"
+                        });
+                        
+                        gsap.to("#hero-subtitle", {
+                            opacity: 1,
+                            y: 0,
+                            duration: 1,
+                            delay: 0.2,
+                            ease: "power2.out"
+                        });
+                    }
+                });
+            }, 1500);
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2');
+                navbar.classList.remove('py-3');
+            } else {
+                navbar.classList.add('py-3');
+                navbar.classList.remove('py-2');
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Magnetic buttons effect
+        document.querySelectorAll('.magnetic-btn').forEach(btn => {
+            btn.addEventListener('mousemove', function(e) {
+                const position = btn.getBoundingClientRect();
+                const x = e.clientX - position.left - position.width / 2;
+                const y = e.clientY - position.top - position.height / 2;
+                
+                btn.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
+            });
+            
+            btn.addEventListener('mouseout', function() {
+                btn.style.transform = 'translate(0px, 0px)';
+            });
+        });
+        
+        // GSAP Animations with ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, TextPlugin);
+        
+        // Hero section animations - simplified to avoid conflicts
+        setTimeout(function() {
+            document.getElementById("hero-title").classList.add("neon-text");
+        }, 2000);
+        
+        // Parallax effect for hero image
+        gsap.to("#hero-image-container", {
+            yPercent: -20,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#hero",
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+        
+        // Floating animation for hero elements
+        const floatingElements = document.querySelectorAll(".floating-3d, .hover-glow");
+        floatingElements.forEach(element => {
+            gsap.to(element, {
+                y: "random(-10, 10)",
+                x: "random(-5, 5)",
+                rotation: "random(-3, 3)",
+                duration: "random(2, 4)",
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        });
+        
+        // Timeline items animation with staggered effect
+        gsap.utils.toArray('.timeline-item').forEach((item, index) => {
+            const direction = index % 2 === 0 ? -50 : 50;
+            
+            gsap.fromTo(item, 
+                { opacity: 0, x: direction, y: 50 },
+                { 
+                    opacity: 1, 
+                    x: 0,
+                    y: 0, 
+                    duration: 1,
+                    delay: index * 0.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 80%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+            
+            // Animate the circle dot
+            gsap.fromTo(item.querySelector('.bg-gradient-to-r'), 
+                { scale: 0, opacity: 0 },
+                { 
+                    scale: 1, 
+                    opacity: 1, 
+                    duration: 0.6,
+                    delay: index * 0.2 + 0.3,
+                    ease: "back.out(1.7)",
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 80%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        });
+        
+        // Service cards animation with staggered and 3D effect
+        gsap.utils.toArray('.service-card').forEach((card, index) => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+            
+            tl.fromTo(card, 
+                { opacity: 0, y: 50, rotationY: 25 },
+                { 
+                    opacity: 1, 
+                    y: 0, 
+                    rotationY: 0,
+                    duration: 0.8,
+                    delay: index * 0.1,
+                    ease: "power3.out"
+                }
+            ).fromTo(card.querySelector('.service-icon'),
+                { scale: 0, rotation: -180 },
+                { 
+                    scale: 1, 
+                    rotation: 0, 
+                    duration: 0.6,
+                    ease: "back.out(1.7)"
+                },
+                "-=0.4"
+            );
+        });
+        
+        // Animate section titles
+        gsap.utils.toArray('.section-title').forEach(title => {
+            const gradientElement = title.nextElementSibling;
+            
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: title,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+            
+            tl.fromTo(title, 
+                { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
+            ).fromTo(gradientElement,
+                { width: 0, opacity: 0 },
+                { width: "100%", opacity: 1, duration: 0.6, ease: "power3.inOut" },
+                "-=0.4"
+            ).to(gradientElement, 
+                { width: "24px", left: "50%", x: "-50%", duration: 0.6, ease: "power3.inOut" }
+            );
+        });
+        
+        // Animate blobs
+        gsap.to(".blob", {
+            scale: 1.2,
+            duration: 2,
+            yoyo: true,
+            repeat: -1,
+            ease: "sine.inOut",
+            stagger: 0.5
+        });
+        
+        // About section parallax
+        gsap.to("#about-image-container", {
+            yPercent: -15,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+        
+        // Online consultation video button effect
+        document.getElementById('video-play-button').addEventListener('click', function() {
+            // Here you would normally trigger a video modal
+            // For demo purposes, we'll just animate the button
+            gsap.to(this, {
+                scale: 0.8,
+                duration: 0.2,
+                yoyo: true,
+                repeat: 1,
+                onComplete: function() {
+                    alert('سيتم تشغيل فيديو توضيحي عن خدمة الكشف أونلاين');
+                }
+            });
+        });
+        
+        // Animate online consultation image
+        gsap.to("#online-consultation-image", {
+            scale: 1.05,
+            scrollTrigger: {
+                trigger: "#online-consultation",
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: true
+            }
+        });
+        
+        // Magnetic effect for all magnetic buttons
+        document.querySelectorAll('.magnetic-btn').forEach(btn => {
+            btn.addEventListener('mousemove', function(e) {
+                const position = btn.getBoundingClientRect();
+                const x = e.clientX - position.left - position.width / 2;
+                const y = e.clientY - position.top - position.height / 2;
+                
+                gsap.to(btn, {
+                    x: x * 0.3,
+                    y: y * 0.5,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                gsap.to(btn, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.5,
+                    ease: "elastic.out(1, 0.3)"
+                });
+            });
+        });
+        
+        // Day cards hover effect
+        document.querySelectorAll('.day-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                gsap.to(this, {
+                    y: -5,
+                    boxShadow: "0 10px 25px rgba(78, 84, 200, 0.2)",
+                    duration: 0.3
+                });
+                
+                // Highlight other cards with same day
+                const day = this.querySelector('p:first-child').textContent;
+                document.querySelectorAll('.day-card').forEach(otherCard => {
+                    if (otherCard !== this && otherCard.querySelector('p:first-child').textContent === day) {
+                        gsap.to(otherCard, {
+                            backgroundColor: "rgba(78, 84, 200, 0.1)",
+                            duration: 0.3
+                        });
+                    }
+                });
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                gsap.to(this, {
+                    y: 0,
+                    boxShadow: "0 5px 15px rgba(0, 0, 0, 0.05)",
+                    duration: 0.5,
+                    ease: "elastic.out(1, 0.3)"
+                });
+                
+                // Reset other cards
+                document.querySelectorAll('.day-card').forEach(otherCard => {
+                    if (otherCard !== this) {
+                        gsap.to(otherCard, {
+                            backgroundColor: "rgb(249, 250, 251)",
+                            duration: 0.3
+                        });
+                    }
+                });
+            });
+        });
+        
+        // Google Map animation
+        ScrollTrigger.create({
+            trigger: "#google-map",
+            start: "top 80%",
+            onEnter: function() {
+                gsap.fromTo("#google-map", 
+                    { opacity: 0, scale: 0.8 },
+                    { 
+                        opacity: 1, 
+                        scale: 1, 
+                        duration: 1,
+                        ease: "elastic.out(1, 0.5)"
+                    }
+                );
+            },
+            once: true
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', function() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary-600', 'active', 'bg-white/30');
+                
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-primary-600', 'active', 'bg-white/30');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
